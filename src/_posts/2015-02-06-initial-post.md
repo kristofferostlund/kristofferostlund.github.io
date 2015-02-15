@@ -2,7 +2,7 @@
 layout: post
 date 2015-02-06
 title: Initial Post
-categories: General
+categories: jekyll example
 ---
 
 *Hello World, right?* 

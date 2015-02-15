@@ -1,0 +1,67 @@
+.posts {
+  .post {
+    position: relative;
+    .info {
+      position: absolute;
+      top: 0;
+      margin-left: -180px;
+      padding-right: 10px;
+      width: 160px;
+      text-align: right;
+      word-wrap: break-word;
+      margin-bottom: 20px;
+      border-right: 1px solid $companion-color;
+      .post-author, .post-date {
+        display: block;
+      }
+      .category {
+        padding: 4px;
+        background-color: rgb(230,230,230);
+      }
+    }
+    @include breakpoint(break-m){
+      .info {
+        position: relative;
+        top: auto;
+        margin-left: auto;
+        width: 100%;
+        text-align: left;
+        border-right: none;
+        .post-author, .post-date {
+          display: inline;
+        }
+        .post-date::before {
+          content: " | ";
+        }
+      }
+    }
+  }
+}
+
+.bottom-line {
+  padding: 20px 0;
+  position: relative;
+  height: 40px;
+    hr {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      top: 50%;
+  }
+  .white-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $background-color;
+    width: 20%;
+    padding: 10px;
+    margin: 0 auto;
+    .two-lines {
+      width: 100%;
+      height: 18px;
+      border-top: 1px solid $companion-color;
+      border-bottom: 1px solid $companion-color;
+    }
+  }
+}

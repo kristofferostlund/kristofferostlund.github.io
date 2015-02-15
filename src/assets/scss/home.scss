@@ -1,0 +1,135 @@
+.home-container {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $home-width;
+  max-width: $content-max-width;
+  text-shadow: 1px 1px rgba($primary-color, 0.1);
+  .main-title {
+    font-size: 7rem;
+    padding: 0;
+    margin: 0;
+    line-height:1;
+    text-align: center;
+    .firstname {
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+    .surname {
+      font-weight: lighter;
+      letter-spacing: 19px;
+    }
+  }
+  hr {
+    margin: 40px 0;
+  }
+  .description {
+    position: relative;
+    height: 140px;
+    text-align: center;
+    .left {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      width: 90px;
+      font-weight: lighter;
+      font-size: 32px;
+      padding: 0 4px;
+      &>div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: -2px;
+      }
+    }
+    .center {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      font-weight: lighter;
+      font-size: 124px;
+      width: 60px;
+      &>div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: -10px;
+      }
+    }
+    .right {
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      width: 180px;
+      font-size: 24px;
+      text-align: left;
+      ul {
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: -.10px;
+      }
+    }
+  }
+  @include breakpoint(break-m) {
+    width: auto;
+    .main-title {
+      font-size: 4rem; 
+      .surname {
+        letter-spacing: 12px;
+      }
+    }
+    hr {
+      margin: 20px 0;
+    }
+    .description {
+      height: 80px;
+      .left {
+        font-size: 24px;
+        width: 70px;
+      }
+      .center {
+        font-size:72px;
+        width: 40px;
+        &>div {
+          margin-top: -5px;
+        }
+      }
+      .right {
+        font-size: 14px;
+        width: 110px;
+      }
+    }
+  }
+  @include breakpoint(break-s) {
+    .main-title {
+      font-size: 3rem; 
+      .surname {
+        letter-spacing: 11px;
+      }
+    }
+    hr {
+      margin: 20px 0;
+    }
+    .description {
+      height: 70px;
+      .left {
+        font-size: 20px;
+        width: 55px;
+      }
+      .center {
+        font-size:54px;
+        width: 30px;
+        &>div {
+          margin-top: -5px;
+        }
+      }
+      .right {
+        font-size: 11px;
+        width: 90px;
+      }
+    }
+  }
+}

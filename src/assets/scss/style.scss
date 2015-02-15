@@ -2,6 +2,10 @@
 The main SCSS file for everything, yep
 */
 
-@import "poole";
-@import "syntax";
-@import "lanyon";
+// @import "syntax";
+@import "variables";
+@import "breakpoints";
+@import "setup";
+@import "home";
+@import "blog";
+@import "navbar";

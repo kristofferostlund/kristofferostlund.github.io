@@ -33,7 +33,8 @@ limit_posts: 10
 relative_permalinks: true
 permalink: pretty
 paginate: 10
-paginate_path: 'page:num'
+destination: serve
+paginate_path: 'blog/page:num'
 excerpt_separator: '<!--more-->'
 
 # Markdown library

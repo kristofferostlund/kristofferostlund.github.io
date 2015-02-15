@@ -1,0 +1,46 @@
+html, body {
+  // font-family: "Helvetica Neue", Helvetica, sans-serif;
+  // font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+  color: $primary-color;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.container {
+  background-color: $background-color;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width: $content-max-width;
+  width: $content-width;
+  margin: 0px auto;
+}
+
+.page {
+  margin-top: 60px;
+}
+
+hr {
+  border-top: 1px solid $companion-color;
+  border-bottom: 0;
+  box-shadow: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $highlight-color;
+  list-style: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+  line-height: 1;
+}
