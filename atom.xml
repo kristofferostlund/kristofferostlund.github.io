@@ -2,15 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Kristoffer Östlund - Software Developer</title>
- <link href="localhost:4000/atom.xml" rel="self"/>
- <link href="localhost:4000/"/>
- <updated>2015-02-15T21:47:41+00:00</updated>
- <id>localhost:4000</id>
+ <link href="http://kristofferostlund.github.io/atom.xml" rel="self"/>
+ <link href="http://kristofferostlund.github.io/"/>
+ <updated>2015-02-15T22:28:50+00:00</updated>
+ <id>http://kristofferostlund.github.io</id>
  <author>
    <name>Kristoffer Östlund</name>
    <email>kristoffer.ostlund@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Hello, World</title>
+   <link href="http://kristofferostlund.github.io/introductions/2015/02/15/hello-world/"/>
+   <updated>2015-02-15T00:00:00+00:00</updated>
+   <id>http://kristofferostlund.github.io/introductions/2015/02/15/hello-world</id>
+   <content type="html">&lt;p&gt;This post is just here to say &amp;ldquo;Hi!&amp;rdquo;, as I have not had the time to actually write something yet. &lt;/p&gt;
+
+&lt;p&gt;I will write about programming, coffee and other things I find interesting at the time.&lt;/p&gt;
+
+&lt;p&gt;But not now.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ostlundk.wordpress.com/blog/&quot;&gt;If you would be interested in what I have written already, you can find it here.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
 
 </feed>

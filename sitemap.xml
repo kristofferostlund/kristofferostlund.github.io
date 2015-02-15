@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>localhost:4000/</loc>
-    <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+    <loc>http://kristofferostlund.github.io/</loc>
+    <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
+    <url>
+      <loc>http://kristofferostlund.github.io/introductions/2015/02/15/hello-world/</loc>
+      
+        <lastmod>2015-02-15T00:00:00+00:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+  
   
   <url>
-    <loc>localhost:4000/404/</loc>
+    <loc>http://kristofferostlund.github.io/404/</loc>
     
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -22,22 +35,9 @@
   </url>
   
   <url>
-    <loc>localhost:4000/about/</loc>
+    <loc>http://kristofferostlund.github.io/about/</loc>
     
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
-    
-    
-      <changefreq>monthly</changefreq>
-    
-    
-      <priority>0.3</priority>
-    
-  </url>
-  
-  <url>
-    <loc>localhost:4000/atom.xml</loc>
-    
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -48,22 +48,9 @@
   </url>
   
   <url>
-    <loc>localhost:4000/</loc>
+    <loc>http://kristofferostlund.github.io/atom.xml</loc>
     
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
-    
-    
-      <changefreq>monthly</changefreq>
-    
-    
-      <priority>0.3</priority>
-    
-  </url>
-  
-  <url>
-    <loc>localhost:4000/blog/</loc>
-    
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -74,9 +61,9 @@
   </url>
   
   <url>
-    <loc>localhost:4000/projects/</loc>
+    <loc>http://kristofferostlund.github.io/</loc>
     
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -87,9 +74,35 @@
   </url>
   
   <url>
-    <loc>localhost:4000/sitemap.xml</loc>
+    <loc>http://kristofferostlund.github.io/blog/</loc>
     
-      <lastmod>2015-02-15T21:47:41+00:00</lastmod>
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>http://kristofferostlund.github.io/projects/</loc>
+    
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>http://kristofferostlund.github.io/sitemap.xml</loc>
+    
+      <lastmod>2015-02-15T22:28:50+00:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
