@@ -13,4 +13,6 @@ lsi: true
 limit_posts: 0
 
 source: 'src'
-destination: 'serve/blog'
+destination: 'serve'
+
+highlighter: "pygments"

@@ -217,9 +217,13 @@ h1, h2, h3, h4, h5, h6 {
       border-top: 1px solid #afafaf;
       border-bottom: 1px solid #afafaf; }
 
+.post-container {
+  margin-top: 60px; }
+
 .images {
-  width: 200px;
-  margin: 40px auto; }
+  width: 300px;
+  margin: 40px auto;
+  text-align: center; }
   .images .image {
     width: 64px;
     height: auto; }
