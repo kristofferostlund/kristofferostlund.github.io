@@ -2,56 +2,52 @@
 layout: page
 title: Blog
 ---
+<p><a href="">My older posts can be found right here</a>.</p>
 
-<div class="page-container">
-
-  <p><a href="">My older posts can be found right here</a>.</p>
-
-  <div class="posts">
+<div class="posts">
 
 
-    {% for post in paginator.posts %}
-    <div class="post">
-      <h1 class="post-title">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h1>
-    
-      <div class="info">
-        <span class="Post-author"><a href="/about">{{ site.author.name }}</span></a>
-        <span class="post-date">{{ post.date | date_to_string }}</span>
-          {% for category in post.categories %}
-            <span class="category">{{ category }}</span>
-          {% endfor %}
-      </div>
-      {{ post.excerpt }}
-
-      <a href="{{ post.url }}">Read more &raquo;</a>
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+  
+    <div class="info">
+      <span class="Post-author"><a href="/about">{{ site.author.name }}</span></a>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+        {% for category in post.categories %}
+          <span class="category">{{ category }}</span>
+        {% endfor %}
     </div>
-    <div class="bottom-line">
-      <hr>
-      <div class="white-box">
-        <div class="two-lines"></div>
-      </div>
-    </div>
-    {% endfor %}
+    {{ post.excerpt }}
+
+    <a href="{{ post.url }}">Read more &raquo;</a>
   </div>
-
-  <!-- <div class="pagination"> -->
-    <!-- {% if paginator.next_page %} -->
-      <!-- <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a> -->
-    <!-- {% else %} -->
-      <!-- <span class="pagination-item older">Older</span> -->
-    <!-- {% endif %} -->
-    <!-- {% if paginator.previous_page %} -->
-      <!-- {% if paginator.page == 2 %} -->
-        <!-- <a class="pagination-item newer" href="/">Newer</a> -->
-      <!-- {% else %} -->
-        <!-- <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a> -->
-      <!-- {% endif %} -->
-    <!-- {% else %} -->
-      <!-- <span class="pagination-item newer">Newer</span> -->
-    <!-- {% endif %} -->
-  <!-- </div> -->
+  <div class="bottom-line">
+    <hr>
+    <div class="white-box">
+      <div class="two-lines"></div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
+
+<!-- <div class="pagination"> -->
+  <!-- {% if paginator.next_page %} -->
+    <!-- <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a> -->
+  <!-- {% else %} -->
+    <!-- <span class="pagination-item older">Older</span> -->
+  <!-- {% endif %} -->
+  <!-- {% if paginator.previous_page %} -->
+    <!-- {% if paginator.page == 2 %} -->
+      <!-- <a class="pagination-item newer" href="/">Newer</a> -->
+    <!-- {% else %} -->
+      <!-- <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a> -->
+    <!-- {% endif %} -->
+  <!-- {% else %} -->
+    <!-- <span class="pagination-item newer">Newer</span> -->
+  <!-- {% endif %} -->
+<!-- </div> -->
