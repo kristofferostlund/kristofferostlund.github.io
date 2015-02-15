@@ -1,22 +1,30 @@
+.message {
+  padding: 20px 0;
+  font-style: italic;
+}
+
 .posts {
   .post {
     position: relative;
     .info {
+      * {
+        color: $companion-color;
+      }
       position: absolute;
       top: 0;
-      margin-left: -180px;
-      padding-right: 10px;
+      margin-left: -200px;
+      padding-right: 20px;
       width: 160px;
       text-align: right;
       word-wrap: break-word;
       margin-bottom: 20px;
-      border-right: 1px solid $companion-color;
+      border-right: 1px solid $companion-color;      
       .post-author, .post-date {
         display: block;
       }
       .category {
         padding: 4px;
-        background-color: rgb(230,230,230);
+        font-style: italic;
       }
     }
     @include breakpoint(break-m){

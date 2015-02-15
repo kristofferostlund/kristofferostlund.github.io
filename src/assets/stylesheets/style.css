@@ -2,7 +2,7 @@
 The main SCSS file for everything, yep
 */
 html, body {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, serif;
   margin: 0;
   padding: 0;
   color: #101010;
@@ -17,7 +17,8 @@ html, body {
 .page-container {
   max-width: 90%;
   width: 700px;
-  margin: 0px auto; }
+  margin: 0px auto;
+  padding-top: 20px; }
 
 .page {
   margin-top: 60px; }
@@ -36,7 +37,7 @@ a:hover {
   text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   line-height: 1; }
 
 .home-container {
@@ -154,23 +155,29 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 11px;
         width: 90px; } }
 
+.message {
+  padding: 20px 0;
+  font-style: italic; }
+
 .posts .post {
   position: relative; }
   .posts .post .info {
     position: absolute;
     top: 0;
-    margin-left: -180px;
-    padding-right: 10px;
+    margin-left: -200px;
+    padding-right: 20px;
     width: 160px;
     text-align: right;
     word-wrap: break-word;
     margin-bottom: 20px;
     border-right: 1px solid #afafaf; }
+    .posts .post .info * {
+      color: #afafaf; }
     .posts .post .info .post-author, .posts .post .info .post-date {
       display: block; }
     .posts .post .info .category {
       padding: 4px;
-      background-color: #e6e6e6; }
+      font-style: italic; }
   @media (max-width: 900px) {
     .posts .post .info {
       position: relative;
@@ -210,6 +217,13 @@ h1, h2, h3, h4, h5, h6 {
       border-top: 1px solid #afafaf;
       border-bottom: 1px solid #afafaf; }
 
+.images {
+  width: 200px;
+  margin: 40px auto; }
+  .images .image {
+    width: 64px;
+    height: auto; }
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -227,6 +241,11 @@ h1, h2, h3, h4, h5, h6 {
       color: #afafaf;
       line-height: 60px;
       font-size: 2rem; }
+    .navbar nav .navbar-item::after {
+      content: " | ";
+      color: #afafaf; }
+    .navbar nav .navbar-item:last-child::after {
+      content: ""; }
 
 .active {
   color: #101010 !important;

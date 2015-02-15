@@ -16,6 +16,13 @@
       line-height: 60px;
       font-size: 2rem;
     }
+    .navbar-item::after {
+      content: " | ";
+      color: $companion-color;
+    }
+    .navbar-item:last-child::after {
+      content: "";
+    }
   }
 }
 

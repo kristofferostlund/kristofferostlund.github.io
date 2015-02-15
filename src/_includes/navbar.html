@@ -2,8 +2,9 @@
   
 
   <nav>
-    <a class="navbar-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
-
+    <span class="navbar-item">
+      <a class="navbar-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
+    </span>
     {% comment %}
       The code below dynamically generates a navbar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
@@ -13,7 +14,9 @@
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
-          <a class="navbar-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          <span class="navbar-item">
+            <a class="navbar-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          </span>
         {% endif %}
       {% endif %}
     {% endfor %}
