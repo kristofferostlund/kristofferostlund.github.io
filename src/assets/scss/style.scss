@@ -2,7 +2,7 @@
 The main SCSS file for everything, yep
 */
 
-// @import "syntax";
+@import "syntax";
 @import "variables";
 @import "breakpoints";
 @import "setup";

@@ -17,6 +17,7 @@
       font-size: 2rem;
       @include breakpoint(break-s) {
         font-size: 0.9rem;
+        padding: 0;
       }
     }
     .navbar-item::after {
