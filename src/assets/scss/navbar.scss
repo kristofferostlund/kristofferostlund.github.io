@@ -15,6 +15,9 @@
       color: $companion-color;
       line-height: 60px;
       font-size: 2rem;
+      @include breakpoint(break-s) {
+        font-size: 0.9rem;
+      }
     }
     .navbar-item::after {
       content: " | ";

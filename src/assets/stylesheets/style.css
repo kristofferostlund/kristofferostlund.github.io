@@ -245,6 +245,9 @@ h1, h2, h3, h4, h5, h6 {
       color: #afafaf;
       line-height: 60px;
       font-size: 2rem; }
+      @media (max-width: 535px) {
+        .navbar nav .navbar-item {
+          font-size: 0.9rem; } }
     .navbar nav .navbar-item::after {
       content: " | ";
       color: #afafaf; }
