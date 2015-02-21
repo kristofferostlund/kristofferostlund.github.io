@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
       border-right: none; }
       .posts .post .info .post-author, .posts .post .info .post-date {
         display: inline; }
-      .posts .post .info .post-date::before {
+      .posts .post .info .post-date::before, .posts .post .info .post-date::after {
         content: " | "; } }
 
 .bottom-line {

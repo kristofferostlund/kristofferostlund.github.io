@@ -38,7 +38,7 @@
         .post-author, .post-date {
           display: inline;
         }
-        .post-date::before {
+        .post-date::before, .post-date::after {
           content: " | ";
         }
       }
