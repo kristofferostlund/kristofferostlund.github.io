@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Kristoffer Östlund - Software Developer</title>
- <link href="http://kristofferostlund.github.io/atom.xml" rel="self"/>
- <link href="http://kristofferostlund.github.io/"/>
- <updated>2015-02-21T20:37:02+00:00</updated>
- <id>http://kristofferostlund.github.io</id>
+ <link href="http://kristofferostlund.com/atom.xml" rel="self"/>
+ <link href="http://kristofferostlund.com/"/>
+ <updated>2015-02-23T13:51:51+00:00</updated>
+ <id>http://kristofferostlund.com</id>
  <author>
    <name>Kristoffer Östlund</name>
    <email>kristoffer.ostlund@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Initial Post</title>
-   <link href="http://kristofferostlund.github.io/introductions/2015/02/21/initial-post/"/>
+   <link href="http://kristofferostlund.com/introductions/2015/02/21/initial-post/"/>
    <updated>2015-02-21T00:00:00+00:00</updated>
-   <id>http://kristofferostlund.github.io/introductions/2015/02/21/initial-post</id>
+   <id>http://kristofferostlund.com/introductions/2015/02/21/initial-post</id>
    <content type="html">&lt;p&gt;Yet another post pretty much saying hi, again.&lt;/p&gt;
 
 &lt;p&gt;In the near future I will put up a post explaining how I built this page, as it seems to be the norm to do so. For me, though, it would mainly be for myself, as I added lots of things I have not been worked with before.&lt;/p&gt;
@@ -35,9 +35,9 @@
  
  <entry>
    <title>Hello, World</title>
-   <link href="http://kristofferostlund.github.io/introductions/2015/02/15/hello-world/"/>
+   <link href="http://kristofferostlund.com/introductions/2015/02/15/hello-world/"/>
    <updated>2015-02-15T00:00:00+00:00</updated>
-   <id>http://kristofferostlund.github.io/introductions/2015/02/15/hello-world</id>
+   <id>http://kristofferostlund.com/introductions/2015/02/15/hello-world</id>
    <content type="html">&lt;p&gt;This post is just here to say &amp;ldquo;Hi!&amp;rdquo;, as I have not had the time to actually write something yet. &lt;/p&gt;
 
 &lt;p&gt;I will write about programming, coffee and other things I find interesting at the time.&lt;/p&gt;
