@@ -1,5 +1,6 @@
 html, body {
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, serif;
+  font-family: $main-font;
+  font-weight: $main-font-weight;
   margin: 0;
   padding: 0;
   color: $primary-color;
@@ -34,6 +35,7 @@ a {
   text-decoration: none;
   color: $highlight-color;
   list-style: none;
+  font-weight: 400;
 }
 a:hover {
   text-decoration: underline;

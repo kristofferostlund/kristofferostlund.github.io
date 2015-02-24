@@ -191,6 +191,7 @@ The main SCSS file for everything, yep
 
 html, body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   color: #101010;
@@ -219,7 +220,8 @@ hr {
 a {
   text-decoration: none;
   color: #22CCEA;
-  list-style: none; }
+  list-style: none;
+  font-weight: 400; }
 
 a:hover {
   text-decoration: underline; }
@@ -291,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
       height: 100%;
       width: 180px;
       font-size: 24px;
+      font-weight: bolder;
       text-align: left; }
       .home-container .description .right ul {
         padding: 0;
