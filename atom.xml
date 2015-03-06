@@ -4,13 +4,76 @@
  <title>Kristoffer Östlund - Software Developer</title>
  <link href="http://kristofferostlund.com/atom.xml" rel="self"/>
  <link href="http://kristofferostlund.com/"/>
- <updated>2015-02-24T13:28:45+00:00</updated>
+ <updated>2015-03-06T12:13:09+00:00</updated>
  <id>http://kristofferostlund.com</id>
  <author>
    <name>Kristoffer Östlund</name>
    <email>kristoffer.ostlund@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Filtering CollectionViewSource</title>
+   <link href="http://kristofferostlund.com/codesnippets/c%23/wpf/2015/03/06/filtering-collectionviewsource/"/>
+   <updated>2015-03-06T00:00:00+00:00</updated>
+   <id>http://kristofferostlund.com/codesnippets/c%23/wpf/2015/03/06/filtering-collectionviewsource</id>
+   <content type="html">&lt;p&gt;I guess this is the first &lt;em&gt;real&lt;/em&gt; post on this blog? And really, the first actual post about &lt;em&gt;really anything&lt;/em&gt; in a little while for me, &lt;a target=&quot;_blank&quot; href=&quot;https://ostlundk.wordpress.com/2014/12/24/code-snippets-a-short-prime-number-checker/#more-532&quot;&gt;since Christmas Eve&lt;/a&gt; apparently. This post is about how to filter a CollectionViewSource in WPF using C#.&lt;/p&gt;
+
+&lt;p&gt;Recently I decided to refactor parts of the code base I have been working on for the last few months. This software relies heavily on a few &lt;code&gt;ObservableCollection&amp;lt;Person&amp;gt;&lt;/code&gt;, where &lt;code&gt;Person&lt;/code&gt; is a custom class for this specific project.&lt;/p&gt;
+
+&lt;p&gt;One is the &lt;em&gt;main collection&lt;/em&gt;, carrying every object available to the user. Another collection is a subset of the first, where every element fulfilled a &lt;em&gt;specific criteria&lt;/em&gt;. Each collection is also set as the source for separate &lt;code&gt;CollectionViewSource&lt;/code&gt;s as &lt;code&gt;DataContext&lt;/code&gt; for its own control. In the actual application I also used a third list, but for this example, it really is not of interest.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;For just the code examples that worked, see end of post.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;Some code&lt;/h2&gt;
+
+&lt;p&gt;For simplicities sake, I will use the class &lt;code&gt;Person&lt;/code&gt;, which has two properties: &lt;code&gt;Name&lt;/code&gt; and &lt;code&gt;IsValid&lt;/code&gt;. It looks something like this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/kristofferostlund/757237d333790faeefbc.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;And the &lt;code&gt;ObservableCollection&amp;lt;Person&amp;gt;&lt;/code&gt;s, and a few instances of &lt;code&gt;Person&lt;/code&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/kristofferostlund/20dfdbf2d8d8fc4f31b9.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Now, for the subset collection to hold an object from the main collection, the property &lt;code&gt;IsChosen&lt;/code&gt; had to be &lt;code&gt;true&lt;/code&gt;. My prior attempt at doing this, which &lt;em&gt;sort of worked&lt;/em&gt;, relied on a checkbox being checked, which on changing status either added or removed said item to the subset collection. Really, it worked just fine for smaller collections, but when the list of people grew larger, only checkboxes visible to the user triggered the &lt;code&gt;Checked&lt;/code&gt; or &lt;code&gt;Unchecked&lt;/code&gt; events. This became a problem when a &lt;em&gt;master checkbox&lt;/em&gt; was added, which could check and uncheck every checkbox.&lt;/p&gt;
+
+&lt;p&gt;As I never have actually filtered anything in C# before, at least not without writing ugly workarounds, I went looking around to see what others suggest. The first thorough answer I found was this, &lt;a href=&quot;http://www.abhisheksur.com/2010/08/woring-with-icollectionviewsource-in.html&quot;&gt;very thorough explanation of CollectoinViews written by Abhishek Sur&lt;/a&gt;. Translated into this example, we got the following code:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/kristofferostlund/c6226f57f7fe96c2ed96.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;While I am used to declaring controls&amp;rsquo; &lt;code&gt;DataContext&lt;/code&gt; as &lt;code&gt;new CollectionViewSource { Source = source };&lt;/code&gt;, he suggests using &lt;code&gt;CollectionViewSource.GetDefaultView(mainCollection)&lt;/code&gt; instead, as it exposes &lt;code&gt;ICollectionView.Filter&lt;/code&gt;, which can then be used to return objects where a something is &lt;code&gt;true&lt;/code&gt;. In this case it would be &lt;code&gt;IsChosen&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is where I figured I might just need one collection, as the second list &lt;em&gt;really only was a filtered version&lt;/em&gt; of the main collection, it can be just that. The initial list with a filter applied.&lt;/p&gt;
+
+&lt;p&gt;Sadly, this was not the solution for me. It works great, it really does filter the collection, but what I found was this applied the filter to the original list as well. So, now both controls were essentially mirrored. &lt;b&gt;The above solution works fine if only one collection would have been used, though&lt;/b&gt;.&lt;/p&gt;
+
+&lt;h2&gt;The solution&lt;/h2&gt;
+
+&lt;p&gt;As I needed &lt;em&gt;two collections&lt;/em&gt;, one displaying every element, and one displaying only a subset of these, I had to find another solution. While &lt;del&gt;copying his solution&lt;/del&gt; learning, I first missed to assign the &lt;code&gt;DataContext&lt;/code&gt; to &lt;code&gt;CollectionViewSource.GetDefaultView(mainCollection)&lt;/code&gt;, and instead went with my default, being &lt;code&gt;DataContext = new CollectionViewSource { Source = mainCollection }&lt;/code&gt;, intellisense still gave me an option to filter it. I did not get the same code as he got. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;No, no!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Given, the code was similar, but not the same. He used a delegate point to a predicate, which would return either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt; depending on some condition. What intellisense was suggesting was a lambda expression calling a method upon an event being called. After the first method did not give the desired result, I went back to try this one out, in hopes it would apply the filter only to this specific &lt;code&gt;CollectionViewSource&lt;/code&gt;, which it luckily also did!&lt;/p&gt;
+
+&lt;p&gt;As the event calls a method of type &lt;code&gt;void&lt;/code&gt;, there were no returning &lt;code&gt;true&lt;/code&gt; of &lt;code&gt;false&lt;/code&gt; to be had. Instead, I had access to two parameters: &lt;code&gt;sender&lt;/code&gt; and &lt;code&gt;args&lt;/code&gt;, and usually the latter exposes a property &lt;code&gt;Item&lt;/code&gt;. I also found a property &lt;code&gt;args.Accepted&lt;/code&gt;, which sounded interesting.&lt;/p&gt;
+
+&lt;p&gt;Boy, was I right! And the item returned was of type &lt;code&gt;Person&lt;/code&gt;! Woo!&lt;/p&gt;
+
+&lt;p&gt;So, this time I assigned the controls &lt;code&gt;DataContext&lt;/code&gt; to a &lt;code&gt;new CollectionViewSource&lt;/code&gt; with its source set to &lt;code&gt;mainCollection&lt;/code&gt;, and then upon the filter event, set &lt;code&gt;args.Accepted&lt;/code&gt; to the value of &lt;code&gt;person.IsChosen&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;It worked!&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/kristofferostlund/a68a6bb2cf0d53aa9aa7.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;It is entirely possible to filter a &lt;code&gt;CollectionViewSource&lt;/code&gt;, and it is rather simple as well! While writing this, I felt rather stupid, finding the second item on Google was the &lt;a target=&quot;_blank&quot; href=&quot;https://msdn.microsoft.com/en-us/library/system.windows.data.collectionviewsource.filter(v=vs.110).aspx&quot;&gt;MSDN page about it&lt;/a&gt;. I solely blame it on me being really tired and slightly unfocused as I was over Skype with a couple of friends while coding.&lt;/p&gt;
+
+&lt;p&gt;Setting a the &lt;code&gt;DataContext&lt;/code&gt; of a control to &lt;code&gt;new CollectionViewSource&lt;/code&gt; and settings its source to &lt;em&gt;really any enumerator&lt;/em&gt; allows for filtering this specific instance of &lt;code&gt;CollectionViewSource&lt;/code&gt; via an event. &lt;/p&gt;
+
+&lt;p&gt;Kris&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Initial Post</title>
