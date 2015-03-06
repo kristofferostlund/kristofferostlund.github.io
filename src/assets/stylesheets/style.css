@@ -1,4 +1,4 @@
-/* 
+/*
 The main SCSS file for everything, yep
 */
 .hll {
@@ -411,6 +411,9 @@ h1, h2, h3, h4, h5, h6 {
 .post-container {
   margin-top: 60px; }
 
+code {
+  background-color: #dadada; }
+
 .images {
   width: 300px;
   margin: 40px auto;
@@ -450,3 +453,10 @@ h1, h2, h3, h4, h5, h6 {
 .active {
   color: #101010 !important;
   font-weight: bolder; }
+
+.footer-break {
+  max-width: 90%;
+  width: 700px; }
+
+.footer {
+  text-align: center; }

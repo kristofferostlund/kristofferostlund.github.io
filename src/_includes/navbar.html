@@ -1,5 +1,4 @@
 <div class="navbar" id="navbar">
-  
 
   <nav>
     <span class="navbar-item">
@@ -10,7 +9,7 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% assign pages_list = site.pages %}
+    {% assign pages_list = site.pages | sort:"name" %}
     {% for node in pages_list %}
       {% if node.title != null %}
         {% if node.layout == "page" %}
@@ -21,12 +20,5 @@
       {% endif %}
     {% endfor %}
 
-    <!-- <div class="navbar-item">Run by <a href="https://twitter.com/{{ site.author.twitter}}">@{{ site.author.name }}<a/></div> -->
   </nav>
-
-  <!-- <div class="navbar-item"> -->
-    <!-- <p> -->
-      <!-- &copy; {{ site.time | date: '%Y' }}. All rights reserved. -->
-    <!-- </p> -->
-  <!-- </div> -->
 </div>
