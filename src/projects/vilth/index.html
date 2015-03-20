@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="dev">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VILTH</title>
+
+  <meta name="description" content="Vilth skapar en tjänst som samlar hela processen från planeringen av jakten till att den har genomförts, rapporterats - och ska minnas.
+">
+
+<meta property="og:title" content="Vilth förbättrar, förenklar och förgyller jakten.">
+<meta property="og:site_name" content="Vilth">
+<meta property="og:url" content="http://vilth.se/">
+<meta property="og:description" content="Vilth skapar en tjänst som samlar hela processen från planeringen av jakten till att den har genomförts, rapporterats - och ska minnas.
+">
+<meta property="og:image" content="http://vilth.se/images/deer-fb.jpg">
+<!-- <meta property="fb:app_id" content="[FB_APP_ID]"> -->
+
+<meta name="twitter:card" content="summary_large_image">
+<!-- <meta name="twitter:site" content="@vilth_jakt"> -->
+
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#005541">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png"> -->
+
+  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/css/global.css">
+
+  <script src="/js/jquery-1.11.2.min.js"></script>
+
+  <script src="/js/main.js"></script>
+
+  <link rel="canonical" href="/">
+  <link rel="alternate" type="application/rss+xml" title="Vilth" href="/feed.xml" />
+
+</head>
+
+
+<body  class="home" id="vilth">
+
+  <svg style="display: none;"><symbol viewBox="0 0 75.3 46" id="shape-arrow-no-shaft-down"><title>arrow-no-shaft-down</title> <polygon fill="#FFFFFF" points="0,8.3 29.3,37.7 37.7,46 46,37.7 75.3,8.3 67,0 37.7,29.3 8.3,0 "/> </symbol><symbol viewBox="0 0 20.3 13.2" id="shape-arrow-right"><title>arrow-right</title> <path fill="#FFFFFF" d="M13.8,12.8c-0.5,0.5-1,0.5-1.5,0l-0.3-0.4c-0.5-0.4-0.4-0.9,0.2-1.4L15.6,8H1.4c-0.4,0-0.7-0.1-1-0.4
+	C0.1,7.2,0,6.9,0,6.5c0-0.4,0.1-0.7,0.4-1c0.3-0.3,0.6-0.4,1-0.4h14.2l-3.3-3c-0.6-0.5-0.6-1-0.2-1.4l0.3-0.4c0.5-0.5,1-0.5,1.5,0
+	l5.6,5l0.4,0.4c0.2,0.2,0.4,0.4,0.4,0.7c0,0.3-0.1,0.5-0.4,0.7l-0.4,0.4L13.8,12.8z"/> </symbol><symbol viewBox="0 0 18.7 18.7" id="shape-block-pen"><title>block-pen</title> <path fill="#FFFFFF" d="M17.5,2.6c0-0.3-0.2-0.6-0.5-1c-0.3-0.3-0.6-0.4-0.9-0.4c-0.4,0-0.7,0.2-1.1,0.5c-0.2,0.2-2.8,2.8-7.9,7.9
+	C7,10,6.7,10.9,6.2,12.4c1.4-0.5,2.4-0.8,2.8-0.9l0.4-0.4C14.1,6.5,16.6,4,17,3.7C17.3,3.3,17.5,2.9,17.5,2.6 M18.7,2.6
+	c0,0.6-0.3,1.3-0.9,1.9c-0.2,0.2-2.9,2.8-8.1,8c0,0-0.1,0.1-0.2,0.1c-1.2,0.4-2.6,0.8-4.2,1.3c0,0-0.1,0-0.2,0c-0.1,0-0.2,0-0.3-0.1
+	c-0.1-0.1-0.2-0.3-0.1-0.5C5.4,11.1,5.8,9.7,6,9c0-0.1,0.1-0.2,0.1-0.3c2.6-2.6,4.5-4.5,5.9-5.9c1.3-1.3,2-2,2.1-2.1
+	C14.7,0.3,15.3,0,16,0c0.6,0,1.2,0.3,1.7,0.8C18.4,1.3,18.7,1.9,18.7,2.6 M14.6,10.1L15.8,9v8.5c0,0.3-0.1,0.6-0.3,0.8
+	c-0.2,0.2-0.5,0.3-0.8,0.3H1.2c-0.3,0-0.6-0.1-0.8-0.3C0.1,18.1,0,17.8,0,17.5V2.9c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.5-0.3,0.8-0.3
+	h9.3l0,0L9.3,2.9H1.2v14.6h13.4V10.1z"/> </symbol><symbol viewBox="-134 -56.6 286 131.6" id="shape-charts"><title>charts</title> <path fill="#FFFFFF" d="M143.8-48.3h-20.6V66.8h20.6V-48.3z M150.9-55.4c0.8,0.8,1.2,1.8,1.2,3V70.9c0,1.2-0.4,2.2-1.2,3
+	c-0.8,0.8-1.8,1.2-3,1.2h-28.8c-1,0-2-0.4-2.8-1.2c-0.9-0.8-1.3-1.8-1.3-3V-52.4c0-1.2,0.4-2.2,1.3-3c0.9-0.8,1.8-1.2,2.8-1.2h28.8
+	C149.1-56.6,150.1-56.2,150.9-55.4 M98.6,17.2H78v49.6h20.6V17.2z M105.7,10.1c0.8,0.8,1.2,1.8,1.2,3v57.8c0,1.2-0.4,2.2-1.2,3
+	c-0.8,0.8-1.8,1.2-3,1.2H73.9c-1.2,0-2.2-0.4-3-1.2c-0.8-0.8-1.2-1.8-1.2-3V13.1c0-1.2,0.4-2.2,1.2-3c0.8-0.8,1.8-1.2,3-1.2h28.8
+	C103.9,9,104.9,9.4,105.7,10.1 M53.4-7.2H32.8v74h20.6V-7.2z M60.4-14.3c0.8,0.8,1.2,1.8,1.2,3v82.2c0,1.2-0.4,2.2-1.2,3
+	c-0.8,0.8-1.8,1.2-3,1.2H28.7c-1.2,0-2.2-0.4-3-1.2c-0.8-0.8-1.2-1.8-1.2-3v-82.2c0-1.2,0.4-2.2,1.2-3c0.8-0.8,1.8-1.2,3-1.2h28.8
+	C58.7-15.4,59.7-15.1,60.4-14.3 M-80.6-48.1c-12.2,0.9-22.5,5.5-31,14s-13.1,18.8-14,31h45V-48.1z M-73.5,4c-0.8,0.8-1.8,1.2-3,1.2
+	h-53.4c-1.2,0-2.2-0.4-3-1.2c-0.8-0.8-1.2-1.8-1.2-3c0-15.9,5.6-29.5,16.8-40.7c11.2-11.2,24.8-16.8,40.7-16.8c1.2,0,2.2,0.4,3,1.2
+	c0.8,0.8,1.2,1.8,1.2,3V1C-72.3,2.2-72.7,3.2-73.5,4 M-18.6-27.9c10.8,11,16.2,25.1,16.2,42c0,16.8-6,31.1-17.9,43
+	C-32.2,69-46.6,75-63.5,75c-16.9,0-30.8-5.5-41.9-16.6c-11-11-16.6-25-16.6-41.8c0-1.2,0.4-2.2,1.2-3c0.8-0.8,1.7-1.2,2.8-1.2
+	c1.1,0,2.1,0.4,3,1.2c0.9,0.8,1.3,1.8,1.3,3c0,14.6,4.8,26.6,14.3,36c9.5,9.4,21.5,14.1,36.1,14.1c14.6,0,27-5.1,37.3-15.4
+	c10.3-10.3,15.4-22.7,15.4-37.3c0-14.7-4.6-26.8-13.9-36.2c-9.3-9.4-21.1-14.1-35.5-14.1c-1.2,0-2.2-0.4-3-1.3
+	c-0.8-0.9-1.2-1.8-1.2-3c0-1.1,0.4-2.1,1.2-2.8c0.8-0.8,1.8-1.2,3-1.2C-43.2-44.5-29.4-39-18.6-27.9"/> </symbol><symbol viewBox="0 0 18 18" id="shape-check"><title>check</title> <path fill="#FFFFFF" d="M13.4,5.7c0.3,0.3,0.3,0.5,0,0.8l-5.6,5.6c0,0,0,0.1,0,0.1c-0.3,0.3-0.5,0.3-0.8,0L4.1,9.4
+	c-0.3-0.3-0.3-0.5,0-0.8c0.3-0.3,0.5-0.3,0.8,0L7.3,11l5.3-5.3C12.8,5.4,13.1,5.4,13.4,5.7 M16.8,9c0-2.2-0.8-4-2.3-5.6
+	C13,1.9,11.2,1.1,9,1.1S5,1.9,3.4,3.4C1.9,5,1.1,6.8,1.1,9s0.8,4,2.3,5.6C5,16.1,6.8,16.9,9,16.9s4-0.8,5.6-2.3
+	C16.1,13,16.8,11.2,16.8,9 M18,9c0,2.5-0.9,4.6-2.6,6.4S11.5,18,9,18c-2.5,0-4.6-0.9-6.4-2.6S0,11.5,0,9c0-2.5,0.9-4.6,2.6-6.4
+	S6.5,0,9,0c2.5,0,4.6,0.9,6.4,2.6S18,6.5,18,9"/> </symbol><symbol viewBox="0 0 248 144.9" id="shape-clock"><title>clock</title> <g> <path fill="#FFFFFF" d="M211.2,55.6c1-4.3-3.3-7.1-6.9-5.1c-1.6,0.9-3.2,1.8-4.7,2.7c-5.2,3-10.4,6-15.6,9c-1.3,0.8-2.7,1.5-4,2.3
+		c-1.3-0.7-2.8-1.1-4.3-1.1c-2.6-4.6-5.1-9.3-7.8-13.8c-1.1-2-3.2-2.9-5.4-2.2c-2.9,0.9-3.8,4-2.5,6.6c1.1,2.2,2.4,4.3,3.6,6.4
+		c1.4,2.5,2.9,5.1,4.3,7.6c-2.9,5.1,0,12.1,5.8,13.3c5.7,1.2,11.3-3.2,11.2-9.1c7.4-4.3,14.9-8.6,22.3-12.8
+		C208.8,58.5,210.7,57.7,211.2,55.6C211.4,54.4,210.9,56.8,211.2,55.6z"/> <path fill="#FFFFFF" d="M247.9,77.1c0.8-14.8-2.4-29.7-10.3-42.4c-7.9-12.6-19.7-23.2-33.4-29.1c-13.6-5.8-29.2-7.1-43.6-4.2
+		c-14.7,2.9-27.7,10.7-37.9,21.6c-10.4,11-17.1,24.9-18.9,40c-0.4,3.1-0.7,6.6-0.8,9.5c-0.1,1.9,0.3,4,0.4,6
+		c0.1,1.9,0.4,3.8,0.6,5.7c1.1,7.3,3.4,14.4,6.7,20.9c6.8,13.2,17.9,24.5,31,31.5c13.1,7.1,28.4,9.4,43.2,7.6
+		c14.7-1.7,28.3-8.2,39.3-18.2c11.2-10.3,19.3-23.5,22.3-38.4C247.3,84.3,247.7,80.7,247.9,77.1C248,76.6,247.9,77.1,247.9,77.1z
+		 M200.6,125.1l2.4,4.5c-7.2,3.4-15,5.4-23,5.9c0-3.4,1-10.2-4.2-10.2c-2.9,0-4.8,2.6-4.8,5.3c0,1.6,0,3.3,0,4.9
+		c-8-0.6-15.7-2.6-23.1-6.2c0.8-1.3,1.6-2.6,2.4-3.9c1.4-2.3,0.9-5.1-1.4-6.6c-4.6-2.3-6.8,2.6-8.6,5.8c-6.6-4.5-12.2-10-16.6-16.6
+		c1.3-0.8,2.5-1.5,3.8-2.3c2.3-1.4,4-4.5,2.3-7c-0.9-1.2-2.3-2.1-3.8-2.1c-1.1,0-1.9,0.5-2.9,1c-1.4,0.8-2.7,1.5-4.1,2.2
+		c-3.6-7.1-5.6-14.9-6.2-22.9c3.6,0,9.6,0.8,9.6-4.5c0-5.2-6-4.5-9.6-4.5c0.6-8,2.5-15.7,5.9-22.8c1.4,0.8,2.8,1.5,4.1,2.3
+		c2.5,1.4,5.1,1.1,6.6-1.4c1.7-2.7,0.9-5.3-1.8-6.9c-1.3-0.8-2.7-1.5-4-2.3c4.6-6.8,10.2-12.3,17-16.8c0.7,1.3,1.5,2.7,2.2,4
+		c1.3,2.1,4,3.4,6.4,1.9c2.4-1.5,2.7-4.4,1.4-6.7c-0.8-1.3-1.6-2.7-2.3-4c7.2-3.4,14.8-5.4,22.8-5.9c0,3.6-0.9,10.2,4.5,10.2
+		c5.4,0,4.5-6.6,4.5-10.2c8,0.6,16,2.6,23.3,6.2c-0.8,1.3-1.5,2.6-2.3,3.9c-1.3,2.3-0.8,5.1,1.5,6.6c4.6,2.3,6.8-2.6,8.7-5.8
+		c6.6,4.5,12.2,10,16.6,16.6c-1.3,0.8-2.5,1.5-3.8,2.3c-2.3,1.4-4,4.5-2.3,7c0.9,1.2,2.3,2.1,3.8,2.1c1.1,0,1.9-0.5,2.9-1
+		c1.4-0.8,2.7-1.5,4.1-2.3c3.6,7.1,5.6,14.8,6.2,22.8c-1.6,0-3.1,0-4.7,0c-2.7,0-5,1.8-4.9,4.6c0,5.2,6.1,4.4,9.6,4.4
+		c-0.6,8-2.5,15.8-5.9,22.9c-1.4-0.8-2.8-1.5-4.1-2.3c-2.5-1.4-5.1-1.1-6.6,1.5c-1.7,2.7-0.9,5.3,1.8,6.9c1.3,0.8,2.7,1.5,4,2.3
+		c-4.6,6.8-10.2,12.4-17,16.8c-1-1.8-1.9-4.2-3.5-5.5C203.6,116.3,198.1,120.9,200.6,125.1z"/> <path fill="#FFFFFF" d="M94.7,22.9c-8.2,0-16.4,0-24.7,0c-9.3,0-18.7,0-28,0c-2.7,0-5.5,0-8.2,0c-3.8,0-6.8,4.2-4,7.4
+		c1.8,2.1,4.7,1.6,7.1,1.6c3.1,0,6.2,0,9.3,0c9.3,0,18.5,0,27.8,0c3.1,0,6.3,0,9.4,0c3.1,0,6.2,0,9.3,0c2.8,0,6.3-0.3,6.5-3.9
+		C99.4,25.6,97.3,22.9,94.7,22.9z"/> <path fill="#FFFFFF" d="M66,76.9c2.5,0,4.7-2.2,4.5-4.7c-0.2-2.3-2.3-4.2-4.5-4.3c-2.1-0.1-4.3,0-6.4,0c-3.7,0-7.5,0-11.2,0
+		c-9.4,0-18.7,0-28.1,0c-5.1,0-10.2,0-15.3,0c-4.3,0-6.8,4.9-3.2,8c1.8,1.5,4.7,1,6.9,1c9.4,0,18.8,0,28.2,0c9.2,0,18.3,0,27.5,0
+		C64.9,76.9,65.4,76.9,66,76.9z"/> <path fill="#FFFFFF" d="M94.7,112.9c-8.2,0-16.4,0-24.7,0c-9.3,0-18.7,0-28,0c-2.7,0-5.5,0-8.2,0c-1.3,0-2.5,0.2-3.5,1
+		c-1.9,1.6-2.1,4.3-0.5,6.2c1.9,2.2,4.6,1.8,7.1,1.8c3.1,0,6.2,0,9.3,0c9.3,0,18.5,0,27.8,0c3.1,0,6.3,0,9.4,0c3.1,0,6.2,0,9.3,0
+		c0.7,0,1.3,0,2,0c2.3-0.1,4.4-2,4.5-4.3C99.4,115.2,97.2,112.9,94.7,112.9z"/> </g> </symbol><symbol viewBox="0 0 20 14.1" id="shape-clouds"><title>clouds</title> <path fill="#FFFFFF" d="M10.7,3.6c-0.4-0.2-0.8-0.3-1.2-0.3H9.2L9.1,3c-0.5-1.5-1.5-2.2-3-2.2c-1,0-1.8,0.3-2.4,1
+	C3.1,2.5,2.8,3.3,2.8,4.4l0.1,0.4L2.4,4.8C2,4.9,1.6,5.1,1.3,5.5C1,5.9,0.8,6.4,0.8,6.9C0.8,7.5,1,8,1.4,8.4
+	c0.4,0.4,0.9,0.6,1.4,0.6h4.3c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.2,0.1,0.3c0,0.1,0,0.2-0.1,0.3C7.3,9.9,7.2,9.9,7.1,9.9H2.8
+	C2,9.9,1.4,9.6,0.8,9C0.3,8.4,0,7.7,0,6.9c0-0.7,0.2-1.2,0.6-1.8C0.9,4.6,1.4,4.3,2,4.1c0.1-1.2,0.5-2.1,1.3-2.9C4,0.4,5,0,6.2,0
+	c0.9,0,1.7,0.2,2.3,0.7c0.6,0.4,1.1,1.1,1.4,1.8c0.6,0.1,1.2,0.3,1.7,0.6L10.7,3.6z"/> <path fill="#FFFFFF" d="M15.2,10.1c0.1,0.2,0.1,0.3,0,0.4l-0.1,0.1c-0.1,0.1-0.3,0.1-0.4-0.1l-0.9-1v4.1c0,0.1,0,0.2-0.1,0.3
+	c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1C13,13.9,13,13.8,13,13.7V9.5l-0.9,1c-0.2,0.2-0.3,0.2-0.4,0.1l-0.1-0.1
+	c-0.2-0.1-0.2-0.3,0-0.4l1.5-1.6l0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2,0.1l0.1,0.1L15.2,10.1z M19,6.3
+	c0.7,0.7,1,1.5,1,2.4c0,1-0.3,1.8-0.8,2.6c-0.6,0.8-1.3,1.2-2.3,1.2h-0.9c-0.1,0-0.2,0-0.3-0.1c-0.1-0.1-0.1-0.2-0.1-0.3
+	c0-0.1,0-0.2,0.1-0.3c0.1-0.1,0.2-0.1,0.3-0.1h0.9c0.7,0,1.2-0.3,1.7-0.9c0.4-0.6,0.7-1.3,0.7-2c0-0.8-0.3-1.4-0.8-2
+	c-0.6-0.5-1.2-0.8-2-0.8H16L16,5.6c-0.5-1.5-1.5-2.2-3-2.2c-1,0-1.8,0.3-2.4,1C9.9,5.1,9.6,6,9.6,7l0.1,0.4L9.3,7.4
+	C8.8,7.5,8.4,7.7,8.1,8.1C7.8,8.6,7.6,9,7.6,9.5c0,0.6,0.2,1.1,0.6,1.5c0.4,0.4,0.9,0.6,1.4,0.6h1.2c0.1,0,0.2,0,0.3,0.1
+	c0.1,0.1,0.1,0.2,0.1,0.3c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0.1H9.6c-0.8,0-1.4-0.3-2-0.9C7.1,11,6.8,10.3,6.8,9.5
+	c0-0.7,0.2-1.2,0.6-1.8c0.4-0.5,0.8-0.9,1.4-1.1c0.1-1.2,0.5-2.1,1.3-2.9C10.8,3,11.8,2.6,13,2.6c0.9,0,1.7,0.2,2.3,0.7
+	c0.6,0.4,1.1,1.1,1.4,1.8C17.6,5.2,18.4,5.6,19,6.3L19,6.3z"/> </symbol><symbol viewBox="0 0 16.6 19.1" id="shape-coins"><title>coins</title> <g> <path fill="#FFFFFF" d="M5.2,19.1c-2.9,0-5.2-2.3-5.2-5.2s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S8,19.1,5.2,19.1z M5.2,9.9
+		c-2.3,0-4.1,1.8-4.1,4.1S2.9,18,5.2,18s4.1-1.8,4.1-4.1S7.4,9.9,5.2,9.9z"/> </g> <g> <path fill="#FFFFFF" d="M11.5,2.8c-0.3,0-0.6,0-0.9,0.1L10.9,4c0,0,0.1,0,0.1,0c0.2,0,0.3,0,0.5,0c2.3,0,4.1,1.8,4.1,4.1
+		c0,2.3-1.8,4.1-4.1,4.1c-0.7,0-1.4-0.2-1.9-0.5l0,1.2c0.6,0.2,1.2,0.4,1.9,0.4c2.9,0,5.2-2.3,5.2-5.2S14.3,2.8,11.5,2.8z"/> </g> <g> <path fill="#FFFFFF" d="M11.7,5.2C11.7,2.3,9.4,0,6.5,0C3.7,0,1.4,2.3,1.4,5.2c0,1.8,0.9,3.4,2.4,4.3L5,8.9
+		C3.5,8.3,2.5,6.9,2.5,5.2c0-2.3,1.8-4.1,4.1-4.1c2.3,0,4.1,1.8,4.1,4.1c0,2.1-1.6,3.8-3.7,4l0.8,1C10,9.6,11.7,7.6,11.7,5.2z"/> </g> </symbol><symbol viewBox="0 0 13.8 19.9" id="shape-file"><title>file</title> <path fill="#FFFFFF" d="M12.6,18.6V8.1H6V1.2H1.2v17.4H12.6z M7.3,1.2H7.2v5.6h5.4V6.7L7.3,1.2z M13.8,6.2v12.4
+	c0,0.3-0.1,0.6-0.4,0.9c-0.2,0.2-0.5,0.4-0.8,0.4H1.2c-0.3,0-0.6-0.1-0.8-0.4C0.1,19.3,0,19,0,18.6V1.2c0-0.3,0.1-0.6,0.4-0.9
+	C0.6,0.1,0.9,0,1.2,0h6.6L13.8,6.2z"/> </symbol><symbol viewBox="0 0 17.4 14.6" id="shape-logo-text"><title>logo-text</title> <rect x="5.1" y="2.8" transform="matrix(0.7071 0.7072 -0.7072 0.7071 4.2762 -2.7371)" fill="#FFFFFF" width="0.7" height="2.1"/> <polygon fill="#FFFFFF" points="10.7,0 8.8,1.9 6.9,0 4.5,2.4 5,2.9 6.9,1 8.8,2.9 8.8,2.9 8.8,2.9 10.7,1 12.6,2.9 13.1,2.4 "/> <polygon fill="#FFFFFF" points="11.2,2.3 10.7,1.9 8.8,3.8 6.9,1.9 6.4,2.3 8.8,4.8 "/> <rect x="11.1" y="3.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.2437 -7.4877)" fill="#FFFFFF" width="2.1" height="0.7"/> <polygon fill="#FFFFFF" points="13.1,6.2 10.7,3.8 8.8,5.7 6.9,3.8 4.5,6.2 5,6.7 6.5,5.1 6.5,7.3 7.2,7.3 7.2,5.1 8.8,6.7 8.8,6.7 
+	8.8,6.7 8.9,6.6 10.4,5.1 10.4,7.3 11.1,7.3 11.1,5.1 12.6,6.7 "/> <polygon fill="#FFFFFF" points="3,10.3 2,13.5 1.9,13.7 1.9,13.7 1.8,13.4 0.8,10.3 0,10.3 1.5,14.6 2.2,14.6 3.8,10.3 "/> <rect x="4.8" y="10.3" fill="#FFFFFF" width="0.7" height="4.3"/> <polygon fill="#FFFFFF" points="7,10.3 7,14.6 9.7,14.6 9.7,14 7.7,14 7.7,10.3 "/> <polygon fill="#FFFFFF" points="9.8,10.3 9.8,10.8 11.1,10.8 11.1,14.6 11.8,14.6 11.8,10.8 13.1,10.8 13.1,10.3 "/> <polygon fill="#FFFFFF" points="16.7,10.3 16.7,12.2 14.8,12.2 14.8,10.3 14,10.3 14,14.6 14.8,14.6 14.8,12.7 16.7,12.7 16.7,14.6 
+	17.4,14.6 17.4,10.3 "/> </symbol><symbol viewBox="0 0 12.2 10.3" id="shape-logo"><title>logo</title> <rect x="0.9" y="3.9" transform="matrix(-0.7069 -0.7073 0.7073 -0.7069 -1.4283 10.0801)" fill="#FFFFFF" width="1" height="2.9"/> <polygon fill="#FFFFFF" points="8.8,0 6.1,2.7 3.4,0 0,3.4 0.7,4.1 3.4,1.4 6.1,4.1 6.1,4.1 6.1,4.1 8.8,1.4 11.5,4.1 12.2,3.4 "/> <polygon fill="#FFFFFF" points="9.5,3.3 8.8,2.6 6.1,5.3 3.4,2.6 2.7,3.3 6.1,6.7 "/> <rect x="9.4" y="4.8" transform="matrix(-0.7071 -0.7072 0.7072 -0.7071 14.7076 16.7647)" fill="#FFFFFF" width="2.9" height="1"/> <polygon fill="#FFFFFF" points="6.1,8 3.4,5.3 0,8.7 0.7,9.4 2.9,7.2 2.9,10.3 3.9,10.3 3.9,7.2 6.1,9.4 6.1,9.4 6.1,9.4 6.2,9.3 
+	8.3,7.2 8.3,10.3 9.3,10.3 9.3,7.2 11.5,9.4 12.2,8.7 8.8,5.3 "/> </symbol><symbol viewBox="0 0 144.8 144.8" id="shape-smile"><title>smile</title> <path fill="#FFFFFF" d="M86,58.8c0-2.4,0.9-4.6,2.7-6.4c1.8-1.8,3.9-2.7,6.4-2.7c2.4,0,4.6,0.9,6.4,2.7c1.8,1.8,2.7,3.9,2.7,6.4
+	c0,2.5-0.9,4.6-2.7,6.4c-1.8,1.8-3.9,2.7-6.4,2.7c-2.5,0-4.6-0.9-6.4-2.7C86.9,63.4,86,61.3,86,58.8 M40.7,58.8
+	c0-2.4,0.9-4.6,2.7-6.4c1.8-1.8,3.9-2.7,6.4-2.7c2.4,0,4.6,0.9,6.4,2.7c1.8,1.8,2.7,3.9,2.7,6.4c0,2.5-0.9,4.6-2.7,6.4
+	c-1.8,1.8-3.9,2.7-6.4,2.7c-2.5,0-4.6-0.9-6.4-2.7C41.6,63.4,40.7,61.3,40.7,58.8 M135.7,72.4c0-17.5-6.2-32.5-18.5-44.8
+	C104.9,15.2,89.9,9.1,72.4,9.1s-32.5,6.2-44.8,18.5C15.2,39.9,9.1,54.9,9.1,72.4s6.2,32.5,18.5,44.8c12.3,12.3,27.3,18.5,44.8,18.5
+	s32.5-6.2,44.8-18.5C129.6,104.9,135.7,89.9,135.7,72.4 M144.8,72.4c0,20-7.1,37-21.2,51.2c-14.1,14.1-31.2,21.2-51.2,21.2
+	c-20,0-37-7.1-51.2-21.2C7.1,109.4,0,92.4,0,72.4c0-20,7.1-37,21.2-51.2C35.4,7.1,52.4,0,72.4,0c20,0,37,7.1,51.2,21.2
+	C137.7,35.4,144.8,52.4,144.8,72.4 M112.8,91.9c-0.4,0.8-0.9,1.8-1.7,3.1c-0.8,1.3-2.3,3.4-4.7,6.2c-2.4,2.8-4.9,5.4-7.8,7.6
+	c-2.8,2.3-6.6,4.3-11.3,6.1c-4.7,1.8-9.8,2.8-15.3,3h-0.6c-5.1,0-9.9-0.9-14.6-2.7c-4.6-1.8-8.3-3.8-11.2-6.1
+	c-2.8-2.3-5.4-4.9-7.8-7.8c-2.4-2.9-3.9-5-4.5-6.4c-0.7-1.3-1.2-2.4-1.6-3.1c-0.6-1.1-0.6-2.3-0.1-3.5c0.5-1.2,1.3-2.1,2.4-2.5
+	c1.1-0.5,2.3-0.5,3.4,0c1.1,0.5,2,1.3,2.5,2.4c0.4,0.6,0.8,1.4,1.4,2.4c0.6,1,1.8,2.7,3.7,5.1c1.9,2.4,3.9,4.4,6.1,6.2
+	c2.2,1.8,5.1,3.4,8.8,4.8c3.7,1.4,7.5,2.1,11.5,2.1h0.6c4.3-0.2,8.4-1,12.2-2.4c3.8-1.4,6.8-3,9.1-4.8c2.3-1.8,4.4-3.9,6.4-6.2
+	c2-2.4,3.2-4,3.7-4.9c0.5-0.9,0.9-1.7,1.3-2.3c0.4-1.1,1.2-1.9,2.4-2.4c1.2-0.5,2.4-0.5,3.5,0c1.1,0.5,1.7,0.7,1.7,0.7
+	s0.2,0.6,0.6,1.8C113.2,89.6,113.2,90.8,112.8,91.9"/> </symbol><symbol viewBox="0 0 75.3 112" id="shape-three-arrows-down"><title>three-arrows-down</title> <polygon fill="#FFFFFF" points="0,74.3 29.3,103.7 37.7,112 46,103.7 75.3,74.3 67,66 37.7,95.3 8.3,66 "/> <polygon fill="#FFFFFF" points="0,41.3 29.3,70.7 37.7,79 46,70.7 75.3,41.3 67,33 37.7,62.3 8.3,33 "/> <polygon fill="#FFFFFF" points="0,8.3 29.3,37.7 37.7,46 46,37.7 75.3,8.3 67,0 37.7,29.3 8.3,0 "/> </symbol></svg>
+
+  <div class="background-image"></div>
+
+<div class="site-header">
+  <header class="site-header">
+
+    <nav role="navigation" class="site-navigation" id="navbar">
+      <div class="site-width">
+        <a href="#vilth" class="logo" id="main-logo">
+          <svg>
+            <use xlink:href="#shape-logo" />
+          </svg>
+        </a>
+        <ul class="content">
+          <li >
+            <a href="#om"><div class="menu-item">Om Vilth</div></a>
+          </li>
+          <li >
+            <a href="#tjansten"><div class="menu-item">Tjänsten</div></a>
+          </li>
+          <li  >
+            <a  href="#kontakt"><div class="menu-item">Kontakta Oss</div></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+</div>
+  <main>
+    <div id="top" class="hero">
+
+  <svg class="hero-logo">
+    <use xlink:href="#shape-logo-text" />
+  </svg>
+
+</div>
+
+<div id="top-div" class="site-width">
+
+  <!--  DOWN ARROW  -->
+  <a href="#om"><div class="arrows-down floating">
+    <svg>
+      <use xlink:href="#shape-arrow-no-shaft-down" />
+    </svg>
+  </div></a>
+
+
+  <!--  OM BEGIN  -->
+  <section  id="om" class="top-info">
+
+    <section class="single-big-text light" id="om">
+      <h1>Vi lanserar under försommaren 2015!</h1>
+    </section>
+    <section class="dark text last">
+      <div>
+      <br>
+        <p>Vi har stora planer. Vi ska skapa en heltäckande lösning för jakten. Vi vill underlätta och skapa värde för alla inblandade i den svenska jakten och siktar på att förenkla processen från planeringen av jakten till att den har genomförts och ska avrapporteras - och minnas.</p>
+        <p>Skriv din mailadress så missar du inga nyheter (vi ska inte mailbomba dig, max ett mail varannan vecka).</p>
+        </div>
+      <div>
+        <form action="//vilth.createsend.com/t/t/s/hhuhyk/" method="post">
+          <input id="fieldEmail" name="cm-hhuhyk-hhuhyk" type="email" placeholder="namn@exempel.se" required />
+          <button type="submit">Registrera</button>
+        </form>
+      </div>
+
+      <a href="#om-produkten"><div class="arrows-down floating">
+        <svg>
+          <use xlink:href="#shape-arrow-no-shaft-down" />
+        </svg>
+  </div></a>
+
+    </section>
+
+    <div class="single-big-text dark-4" id="om-produkten">
+      <h1>Vilth förbättrar, förenklar och förgyller jakten.</h1>
+      <br>
+      <p>Vi tillhandahåller ett användarvänligt system som fungerar för alla jägare och som fokuserar på att lösa problem för skötselområden och jaktlag.</p>
+    </div>
+
+    <section class="grid-3">
+      
+  <div class="box dark-3">
+    <svg>
+      <use xlink:href="#shape-clouds" />
+    </svg>
+    <div class="box-content">
+      Med Vilth blir all relevant information som rapporterats in tillgänglig för alla i skötselområdet eller jaktlaget. Det kan handla om kvoter, viktiga meddelanden, avskjutningsstatistik samt vem som har betalat fällavgifter. Allt fungerar i realtid och är enkelt. Det vet vi för att vi har redan testat systemet under en jaktsäsong.
+    </div>
+  </div>
+
+  <div class="box dark-2">
+    <svg>
+      <use xlink:href="#shape-clock" />
+    </svg>
+    <div class="box-content">
+      Vilth sparar otroligt mycket tid för de som tar ett administrativt ansvar inom jakten. Du behöver inte längre fylla i listor, hålla koll på telefonen, telefonsvararen eller sms. Med Vilth blir betalningar av fällavgifter enklare och smidigare för alla. Vi har dessutom en telefonsupport för alla som inte är så vana med IT.
+    </div>
+  </div>
+
+  <div class="box dark-1">
+    <svg>
+      <use xlink:href="#shape-smile" />
+    </svg>
+    <div class="box-content">
+      Statistiken visas på ett snyggt och enkelt sätt i tjänsten och är både rolig och användbar i planeringen och genomförandet av en effektiv viltvård. Med Vilth är det enklare att upptäcka behovet av exempelvis extrainventering och skyddsjakt.
+    </div>
+  </div>
+
+
+    </section>
+
+  </section>
+
+  <!--  OM END  -->
+
+
+  <!--  TJANSTEN BEGIN  -->
+  <section id="tjansten">
+    <div class="single-big-text dark-4">
+      <h1>Det här är Vilth - före och efter jakten.</h1>
+    </div>
+
+    <section class="grid-3">
+      
+  <div class="box dark-3">
+    <svg>
+      <use xlink:href="#shape-block-pen" />
+    </svg>
+    <div class="box-content">
+      1. Planeringen blir enkel och effektiv tack vare bra statistik, smidig fördelning av kvoter samt bra verktyg för kommunikation.
+    </div>
+  </div>
+
+  <div class="box dark-2">
+    <svg>
+      <use xlink:href="#shape-clouds" />
+    </svg>
+    <div class="box-content">
+      2. Alla inom skötselområdet kan i realtid enkelt komma åt relevant information och bli informerade om förändringar av kvarvarande tilldelning. Hur du väljer att bli uppdaterad är upp till dig.
+    </div>
+  </div>
+
+  <div class="box dark-1">
+    <svg>
+      <use xlink:href="#shape-check" />
+    </svg>
+    <div class="box-content">
+      3. Du rapporterar väldigt enkelt observerat och fällt vilt via sms, appen eller datorn och det blir direkt synligt för alla som påverkas. Det kan vara andra i älgskötselområdet eller andra i jaktlaget.
+    </div>
+  </div>
+
+  <div class="box light-3">
+    <svg>
+      <use xlink:href="#shape-file" />
+    </svg>
+    <div class="box-content">
+      4. När exempelvis en älg fällts och rapporterats skickas automatiskt ett betalningsåläggande till ansvarig jaktledare på fällavgiften.
+    </div>
+  </div>
+
+  <div class="box light-2">
+    <svg>
+      <use xlink:href="#shape-coins" />
+    </svg>
+    <div class="box-content">
+      5. Fällavgifter och andra eventuella avgifter för jägare betalas på det sättet användaren själv önskar och pengarna kommer direkt till rätt konto. Vilth meddelar betalningsmottagaren när pengarna har kommit in på kontot.
+    </div>
+  </div>
+
+  <div class="box light-1">
+    <svg>
+      <use xlink:href="#shape-charts" />
+    </svg>
+    <div class="box-content">
+      6. Snyggt framställd statistik är både kul att följa och användbar för att nå en förbättrad viltvård.
+    </div>
+  </div>
+
+
+    </section>
+    <section>
+      <div class="single-big-text dark-6">
+        <h1>Här kommer ett litet smakprov på vår tjänst.</h1>
+      </div>
+    </section>
+
+    <!-- SCREENSHOT BEGIN -->
+     <!-- LOOP ALL SCREENSHOTS FROM DATA -->
+  <section class="screen-shots">
+    
+    <div class="screen-shot">
+      <div class="desktop-frame image">
+        <img src="./images/screenshots/screen2.jpg">
+      </div>
+      <div class="text-content">
+        <div>
+          Såhär enkelt presenteras exempelvis de lovliga älgarna för den inloggade personen. 5 tjurar, 12 kor och 21 kalvar.
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="linebreak"><hr></div>
+    
+
+    
+    <div class="screen-shot">
+      <div class="desktop-frame image">
+        <img src="./images/screenshots/screen3.jpg">
+      </div>
+      <div class="text-content">
+        <div>
+          Rapporteringen är som sagt väldigt enkel; klicka “tjur”, “antalet taggar” och sen rapportera. Funkar lika bra via sms.
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="linebreak"><hr></div>
+    
+
+    
+    <div class="screen-shot">
+      <div class="desktop-frame image">
+        <img src="./images/screenshots/screen4.jpg">
+      </div>
+      <div class="text-content">
+        <div>
+          Det här är en del av statistiken. Här presenteras vad alla jaktlag i älgskötselområdet Granskogen har fällt.
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+  </section>
+  <!-- LOOP SCREENSHOTS END -->
+
+    <!-- SCREENSHOT END -->
+
+    <section id="citat" class="dark-image quote transparent">
+      <blockquote>
+        “För mig har det fungerat klockrent och sparat väldigt mycket tid. Jag har annat att göra än att sitta i telefon.”
+      </blockquote>
+      <div class="author">
+        Conny Pettersson, markägare och ordförande för Björkviks Kron- och älgskötselområde. Delaktig i utvecklingen av Vilth
+      </div>
+    </section>
+  </section>
+
+  <!-- IN MEDIA BEGIN -->
+  <section class="in-media">
+  <div class="lightest">
+    
+      <div class="newsoutlet">
+        <a target="_blank" href="http://www.atl.nu/skog/de-g-r-jakten-enklare">
+        <img src="./images//newsoutlets/atl.png" alt="ATL" />
+        </a>
+      </div>
+    
+      <div class="newsoutlet">
+        <a target="_blank" href="http://jaktjournalen.se/ny-sajt-ska-hjalpa-jagare/">
+        <img src="./images//newsoutlets/jaktjournalen.png" alt="Jaktjournalen" />
+        </a>
+      </div>
+    
+      <div class="newsoutlet">
+        <a target="_blank" href="http://sverigesradio.se/sida/artikel.aspx?programid=87&artikel=6113066">
+        <img src="./images//newsoutlets/p4.png" alt="P4 Sörmland" />
+        </a>
+      </div>
+    
+      <div class="newsoutlet">
+        <a target="_blank" href="http://svenskjakt.se/Start/Nyheter/2015/03/nytt-webbsystem-for-skotselomraden/">
+        <img src="./images//newsoutlets/svenskjakt.jpg" alt="Svensk Jakt" />
+        </a>
+      </div>
+    
+      <div class="newsoutlet">
+        
+        <img src="./images//newsoutlets/sn.png" alt="Södermanlands Nyheter" />
+        
+      </div>
+    
+  </div>
+</section>
+
+  <!-- IN MEDIA END -->
+
+
+  <!--  TJANSTEN END  -->
+
+
+  <!-- KONTAKT BEGIN -->
+  <section id="kontakt" class="contact">
+  <div class="dark-3">
+    
+      <div class="person">
+        <img src="./images//team/axel.jpg" alt="Axel Persson" class="img">
+        <div class="name">Axel Persson,</div>
+        <div class="role">Jägare och Kundkontakt</div>
+        <a href="tel:0046703648249" class="tel">0703 64 82 49</a>
+        <a target="_blank" href="mailto:axel.persson@vilth.se" class="mail">axel.persson@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/gustaf.jpg" alt="Gustaf Geijer" class="img">
+        <div class="name">Gustaf Geijer,</div>
+        <div class="role">Jägare och Kundkontakt</div>
+        <a href="tel:0046760470016" class="tel">0760 47 00 16</a>
+        <a target="_blank" href="mailto:gustaf.geijer@vilth.se" class="mail">gustaf.geijer@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/victor-s.jpg" alt="Victor Sylwander" class="img">
+        <div class="name">Victor Sylwander,</div>
+        <div class="role">Jägare och Kundkontakt</div>
+        <a href="tel:0046703648249" class="tel">0730 77 66 77</a>
+        <a target="_blank" href="mailto:victor.sylwander@vilth.se" class="mail">victor.sylwander@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/wilhelm.jpg" alt="Wilhelm Löwen" class="img">
+        <div class="name">Wilhelm Löwen,</div>
+        <div class="role">Jägare och Kundkontakt</div>
+        <a href="tel:0046703616929" class="tel">0703 61 69 29</a>
+        <a target="_blank" href="mailto:wilhelm.lowen@vilth.se" class="mail">wilhelm.lowen@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/henrik.jpg" alt="Henrik Hoffman" class="img">
+        <div class="name">Henrik Hoffman,</div>
+        <div class="role">VD</div>
+        <a href="tel:0046735051632" class="tel">0735 05 16 32</a>
+        <a target="_blank" href="mailto:henrik.hoffman@vilth.se" class="mail">henrik.hoffman@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/viktor-a.jpg" alt="Viktor Ånöstam" class="img">
+        <div class="name">Viktor Ånöstam,</div>
+        <div class="role">Jaktexpert och Kundkontakt</div>
+        <a href="tel:0046703563335" class="tel">0703 56 33 35</a>
+        <a target="_blank" href="mailto:viktor.anostam@vilth.se" class="mail">viktor.anostam@vilth.se</a>
+      </div>
+    
+      <div class="person">
+        <img src="./images//team/lasse.jpg" alt="Lasse Hoffman" class="img">
+        <div class="name">Lasse Hoffman,</div>
+        <div class="role">Kundsupport</div>
+        <a href="tel:0046705919203" class="tel">0705 91 92 03</a>
+        <a target="_blank" href="mailto:lasse.hoffman@vilth.se" class="mail">lasse.hoffman@vilth.se</a>
+      </div>
+    
+  </div>
+</section>
+  <!-- KONTAKT END -->
+
+</div>
+
+  </main>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60174777-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
