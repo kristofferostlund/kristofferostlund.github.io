@@ -5,6 +5,10 @@ title: Wrapping-variable snippets in Visual Studio Code
 categories: codesnippets vscode vs code
 ---
 
+This will be just a short post on the topic of wrapping-variable snippets.
+
+<!--more-->
+
 I just thought I'd quickly get this into words, as I found something I wanted to share.
 
 Because of Atom not properly working on my computer, it just kept crashing and being horribly slow - sort of like in the olden days - I've made the switch to Visual Studio Code I'm absolutely loving it

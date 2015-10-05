@@ -9,6 +9,8 @@ I do wish I had the time to write more, but I've had little to no free time the 
 
 At work we've used [CoffeeScript](http://coffeescript.org/) instead of plain JavaScript, and boy, have I fallen in love. It's just _beautiful_, _delicious_. Mix it up with some [lodash](https://lodash.com/) awesomeness and we've got a party. For instance, getting all values of an object is made super simple as you can just `map` over it, same as you would with an Array. This right here sort of helped me solve a problem I encountered couple of weeks, which I thought I'd write about.
 
+<!--more-->
+
 _Actually, I wrote most of this post the night almost three weeks ago, but I've been busy at work and haven't had the time to finish up before today._
 
 See, whilst parsing a CSV file, which sort of stitched together an array of JavaScript objects, I wanted to smoothly remove duplicates of objects in an array before submitting it to the server. This is super simple for primitive types with lodash, it's just to use `_.uniq(arr)`. Sadly, objects doesn't work that way.
