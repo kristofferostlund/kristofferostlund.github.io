@@ -15,7 +15,7 @@ _Actually, I wrote most of this post the night almost three weeks ago, but I've 
 
 See, whilst parsing a CSV file, which sort of stitched together an array of JavaScript objects, I wanted to smoothly remove duplicates of objects in an array before submitting it to the server. This is super simple for primitive types with lodash, it's just to use `_.uniq(arr)`. Sadly, objects doesn't work that way.
 
-``` coffeescript
+```coffeescript
 _.uniq [1, 2, 1, 2, 3]
 # output: [ 1, 2, 3 ]
 
@@ -32,7 +32,7 @@ _.uniq [obj, obj]
 
 [This discussion on Stack Overflow](http://stackoverflow.com/questions/9923890/removing-duplicate-objects-with-underscore-for-javascript) got me on the right track but didn't really solve it for me. The accepted answer says to return a stringified version of the object, which works great if the keys always are in the same order in every object, which is dependent either on order of declaration or where the script is being run.
 
-``` coffeescript
+```coffeescript
 _.uniq [{a: 2}, {a: 2}], JSON.stringify
 # output: [ { a: 2, b:3 } ]
 
@@ -51,7 +51,7 @@ Remember I said `_.map` can iterate over objects too? This is great, as that fun
 
 I found the easiest way to do this was to `_.map` over the object and return the key and the value in an array, which we then sort and finally join with a comma.
 
-``` coffeescript
+```coffeescript
 # Just showing what _.uniq will base objets' uniqueness on:
 _.map [{a:2, b:3}, {b:3, a:2}], (o) -> _.map(o, (v, k) -> [k, v]).sort().join(',')
 # output: [ 'a,2,b,3', 'a,2,b,3' ]
@@ -64,7 +64,7 @@ _.uniq [{a:2, b:3}, {b:3, a:2}], (o) -> _.map(o, (v, k) -> [k, v]).sort().join('
 Let's break that, honestly quite scary looking callback and make it more readable.
 
 
-``` coffeescript
+```coffeescript
 # Here is just the callback
 callback = (o) -> _.map(o, (v, k) -> [k, v]).sort().join(',')
 
@@ -91,7 +91,7 @@ callback = (object) ->
 
 As we the comparison is between two strings of two objects, we can make this less strict as well. Let's say you're working on an Angular project and it attaches a `$$hashKey?`, or the two objects have different `_id`'s, or whatever. We can  just filter those out. Or you might not care about casing? Throw a `.toLoweCase()` in there.
 
-``` coffeescript
+```coffeescript
 # Filter out '$$hashKey' from comparison.
 _.uniq [{$$hashKey: 0, a:2, b:3}, {$$hashKey: 1, b:3, a:2}], (o) -> _.chain(o).map((v, k) -> [k, v]).filter((arr) -> '$$hashKey' not in arr).value().sort().join(',')
 # outputs: [{"$$hashKey":0,"a":2,"b":3}]
@@ -121,7 +121,7 @@ But what if there happen to be a comma in the key (_why would you do that?_) or 
 
 Make sure to this time put the join inside the _.map function, as this will ensure the join characters are properly accounted for.
 
-``` coffeescript
+```coffeescript
 # It might be computer generated? I don't know?
 _.uniq [{',a,': 'b', 'b': 'c'}, {',a':',b', 'b': 'c'}], (o) -> _.map(o, (v, k) -> [k, v]).sort().join(',')
 # output: [{",a,":"b","b":"c"}]
