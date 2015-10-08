@@ -25,7 +25,7 @@ _Faboluous!_
 
 Here is the snippet I wrote.
 
-``` json
+```javascript
 {
   "Wrapping-variable require": {
     "prefix": "_req",
