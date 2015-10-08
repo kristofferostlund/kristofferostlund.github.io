@@ -11,13 +11,13 @@ It has been so, so long now! I have not really written much in a while, mainly b
 
 <!--more-->
 
-Also, today is Christmas Eve, the big day of Christmas in Sweden, which is where I currently am. So, obviously, writing a short blog post is a lovely idea! The 24th of December every year, at 3 PM, Sweden gets completely turned off for an hour, while we all watch From All of us to All of You. Apparently, more than half of Sweden’s population watched it in 1997, and it has been running since 1959.
+Also, today is Christmas Eve, the big day of Christmas in Sweden, which is where I currently am. So, obviously, writing a short blog post is a lovely idea! The 24th of December every year, at 3 PM, Sweden gets completely turned off for an hour, while we all watch [From All of us to All of You](https://en.wikipedia.org/wiki/From_All_of_Us_to_All_of_You). Apparently, more than half of Sweden’s population watched it in 1997, and it has been running since 1959.
 
 #### What about the CoffeeScript?
 
-As I was saying, coffee… Wonderful, coffee… I absolutely love coffee. Thus, teaching myself CoffeeScript is great! I also have this strange love for prime numbers. Numberphile has a great playlist on primes which I have been watching, because prime numbers are awesome! Thus, writing a simple prime checker is fun, and because I am teaching myself a new language, it is a great way to learn!
+As I was saying, coffee… Wonderful, coffee… I absolutely love coffee. Thus, teaching myself CoffeeScript is great! I also have this strange love for prime numbers. [Numberphile has a great playlist on primes](https://www.youtube.com/playlist?list=PL0D0BD149128BB06F) which I have been watching, because prime numbers are awesome! Thus, writing a simple prime checker is fun, and because I am teaching myself a new language, it is a great way to learn!
 
-Now, CoffeeScript is this really cool language which compiles to JavaScript. Its Syntax is highly weird – extremely verbose – yet quite cool. I must say I kind of like using it, though setting it up was slightly annoying. On the flip side, I now know how to use Cygwin quite well. I think. Probably not. But whatever.
+Now, CoffeeScript is this really cool language which compiles to JavaScript. Its Syntax is highly weird – extremely verbose – yet quite cool. I must say I kind of like using it, though setting it up was slightly annoying. On the flip side, I now know how to use [Cygwin](https://www.cygwin.com/) quite well. I think. Probably not. But whatever.
 
 #### First some maths
 
