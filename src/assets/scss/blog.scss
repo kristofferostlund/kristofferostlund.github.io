@@ -7,41 +7,17 @@
   .post {
     position: relative;
     .info {
-      * {
+      *:not(a) {
         color: $companion-color;
-        
       }
-      position: absolute;
-      top: 0;
-      margin-left: -200px;
-      padding-right: 20px;
-      width: 160px;
-      text-align: right;
       word-wrap: break-word;
-      margin-bottom: 20px;
-      border-right: 1px solid $companion-color;      
-      .post-author, .post-date {
-        display: block;
+      padding-bottom: 20px;
+      .post-date::before, .post-date::after {
+        content: " | ";
       }
       .category {
         padding: 4px;
         font-style: italic;
-      }
-    }
-    @include breakpoint(break-m){
-      .info {
-        position: relative;
-        top: auto;
-        margin-left: auto;
-        width: 100%;
-        text-align: left;
-        border-right: none;
-        .post-author, .post-date {
-          display: inline;
-        }
-        .post-date::before, .post-date::after {
-          content: " | ";
-        }
       }
     }
   }
@@ -51,11 +27,11 @@
   padding: 20px 0;
   position: relative;
   height: 40px;
-    hr {
-      position: absolute;
-      width: 100%;
-      margin: 0;
-      top: 50%;
+  hr {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 50%;
   }
   .white-box {
     position: absolute;

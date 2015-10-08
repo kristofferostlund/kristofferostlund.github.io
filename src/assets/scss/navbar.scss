@@ -3,7 +3,8 @@
   width: 100%;
   top: 0;
   z-index: 1;
-    background-color: $nav-color;
+  background-color: $nav-color;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
   nav {
     max-width: $content-max-width;
     width: $content-width;
