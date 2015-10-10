@@ -12,6 +12,8 @@ lsi: true
 # Removes the upper limit for posts generated
 limit_posts: 0
 
+is_dev: false
+
 source: 'src'
 destination: 'serve'
 

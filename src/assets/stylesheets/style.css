@@ -398,6 +398,11 @@ h1, h2, h3, h4, h5, h6 {
 .post-container {
   margin-top: 60px; }
 
+.post-divider {
+  margin: 20px 0;
+  border: thin none;
+  border-bottom: 1px solid #afafaf; }
+
 .images {
   width: 300px;
   margin: 40px auto;

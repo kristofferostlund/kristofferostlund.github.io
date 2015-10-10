@@ -18,7 +18,6 @@ title: Blog
     <div class="info">
       <span class="Post-author"><a href="/about">{{ site.author.name }}</span></a>
       <span class="post-date">{{ post.date | date_to_string }}</span>
-      <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a>
         {% for category in post.categories %}
           <span class="category">{{ category }}</span>
         {% endfor %}
@@ -34,7 +33,6 @@ title: Blog
     </div>
   </div>
   {% endfor %}
-{% include disqus_comment_count.html %}
 </div>
 
 

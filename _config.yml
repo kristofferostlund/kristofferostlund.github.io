@@ -1,6 +1,6 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: Kristoffer Östlund - Software Developer
+title: Kristoffer Östlund - Fullstack Developer
 description: Portfolio website and blog
 tagline: Coffee, code, continue
 url: localhost:4000
@@ -19,6 +19,8 @@ author:
 
 # general setting for Jekyll
 googleAnalytics: UA-59992473-1
+timezone: 'Europe/Stockholm'
+is_dev: true
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
